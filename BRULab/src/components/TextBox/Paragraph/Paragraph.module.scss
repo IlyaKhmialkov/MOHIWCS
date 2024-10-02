@@ -1,0 +1,8 @@
+@import "../../../assets/variables.scss";
+
+.preContainer {
+    white-space: pre-wrap;
+    color: $text;
+    font-family: $font;
+    font-size: 1.1rem;
+}

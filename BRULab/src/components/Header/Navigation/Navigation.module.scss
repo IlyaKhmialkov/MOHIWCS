@@ -1,0 +1,17 @@
+@import "../../../assets/variables.scss";
+
+.navContainer {
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+        padding: 0;
+        margin-right: 1rem;
+
+        li {
+            .link {
+                color: $text;
+            }
+        }
+    }
+}

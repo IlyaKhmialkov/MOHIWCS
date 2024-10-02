@@ -1,0 +1,11 @@
+@import "../../assets/variables.scss";
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}

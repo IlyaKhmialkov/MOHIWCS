@@ -1,0 +1,12 @@
+@import "../../assets/variables.scss";
+
+.header {
+    background-color: $bgSecondary;
+    color: $text;
+    height: 4.5rem;
+    padding: 0 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

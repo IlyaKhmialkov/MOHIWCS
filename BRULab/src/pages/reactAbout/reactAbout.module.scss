@@ -1,0 +1,21 @@
+@import "../../assets/variables.scss";
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: $bgPrimary;
+    color: $text;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+    align-items: center;
+    padding: 1.5rem 6rem;
+}

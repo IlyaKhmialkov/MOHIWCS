@@ -1,0 +1,51 @@
+@import "../../assets/variables.scss";
+
+.buttonText {
+    padding: 0.67rem 1.33rem;
+    margin: 0.67rem;
+
+    font-family: $font;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $text;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    background: linear-gradient(to bottom, #4caf50, #2e8b57);
+    border-radius: 5px;
+    border: none;
+
+    box-shadow: 0 0 0.1rem 0.1rem rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.buttonText:hover {
+    box-shadow: 0 0 0.15rem 0.1rem rgba(255, 255, 255, 0.3);
+}
+
+.buttonText:active {
+    box-shadow: 0 0 0.2rem 0.14rem rgba(255, 255, 255, 0.6);
+}
+
+.buttonImg {
+    display: flex;
+    align-items: center;
+    color: $text;
+    font-family: $font;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+        height: 3.125rem;
+        margin: 0 1rem 0 0;
+    }
+    p {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 0.55rem;
+    }
+}

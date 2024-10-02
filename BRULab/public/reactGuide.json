@@ -1,0 +1,8 @@
+{
+    "text1": "Для начала работы с react вам необходимо установить node.js.",
+    "linkText": "ссылка на node.js",
+    "nodeLink": "https://nodejs.org/en",
+    "nodeImg": "nodeJs.png",
+    "text2": "Для начала работы с react перейдите в консоли в директорию проекта и введите команду npm create vite. затем введите y, введите название проекта, выбирете фрэймворк react, выбирете язык (JS / TS) + SWC. Всё, ваш проект создан! для его запуска введите npm run dev.",
+    "consoleImg": "console.png"
+}
