@@ -4,12 +4,16 @@ interface IButtonParams {
     text?: string;
     imageLink?: string;
     link?: string;
+    action?: () => void;
 }
 
-export function Button({ text, imageLink, link }: IButtonParams) {
+export function Button({ text, imageLink, link, action }: IButtonParams) {
     const clickHandler = () => {
         if (link) {
             window.location.href = link;
+        }
+        if (action) {
+            action();
         }
     };
 

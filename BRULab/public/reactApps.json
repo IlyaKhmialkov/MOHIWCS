@@ -1,0 +1,12 @@
+{
+    "text1": "You use React apps every day, while watching your favorite TV shows, browsing through social media, and checking your email. Time to find out which famous companies built their apps with ReactJS.",
+    "imgSrc": "ReactApps.png",
+    "header1": "Facebook",
+    "text2": "Although partially, Facebook is making use of React js. Their webpage is built with React, as the script that is blended in the application code. The use of React on their webpage includes the news feed, profiles, posts, comments, notifications, and other interactive components. The mobile app is also built with a version of React called React Native which is similar, although responsible for displaying the iOS and Android native components instead of the DOM elements.",
+    "text3": "Interestingly, Facebook was the place where the ReactJS library was initially created, which is why it is obvious for the app to use it. React has a vibrant and active community, supported by Facebook and independent developers. This extensive community provides a wealth of resources, libraries, and tools, facilitating knowledge sharing and collaboration.",
+    "header2": "Instagram",
+    "text4": "The use of ReactJS within Instagram is enormous. Proof of that is the numerous features including the geolocations, Google Maps APIs, search engine accuracy as well as tags that pop out without hashtags. It is all there in the API of this React app – and is really impressive. Instagram is completely based on the ReactJS library and has let fans fully adapt to its amazing features.",
+    "text5": "React’s one-way data flow ensures a predictable data structure, making it easier to debug and maintain the application. This is crucial for Instagram, where data consistency and reliability are essential for a seamless user experience​. Instagram also benefits from React’s performance optimizations. The use of the Virtual DOM and server-side rendering ensures that Instagram's dynamic content loads quickly and smoothly, enhancing user experience.",
+    "buttonText": "see other react apps",
+    "buttonLink": "https://brainhub.eu/library/famous-apps-using-reactjs"
+}

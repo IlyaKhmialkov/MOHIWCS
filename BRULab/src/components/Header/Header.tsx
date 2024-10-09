@@ -11,7 +11,7 @@ export function Header() {
         <>
             <Modal active={modalActive} setActive={modalSetActive} />
             <header className={styles.header}>
-                <Button text="react" imageLink="react.svg" paramFunction={() => modalSetActive(true)} />
+                <Button text="react" imageLink="react.svg" action={() => modalSetActive(true)} />
                 <Navigation />
             </header>
         </>
