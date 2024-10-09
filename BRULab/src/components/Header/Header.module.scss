@@ -10,3 +10,19 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media (max-width: 550px) {
+    .header {
+        padding-top: 0.5rem;
+        flex-direction: column;
+        justify-content: left;
+        gap: 0.5rem;
+        height: 6rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        height: 11.5rem;
+    }
+}

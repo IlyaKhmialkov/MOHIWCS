@@ -19,3 +19,18 @@ body {
     align-items: center;
     padding: 1.5rem 6rem;
 }
+
+@media (max-width: 670px) {
+    .main {
+        gap: 2rem;
+        margin: 1rem 0;
+        padding: 1.25rem 3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .main {
+        margin: 0.66rem 0;
+        padding: 1rem 2rem;
+    }
+}

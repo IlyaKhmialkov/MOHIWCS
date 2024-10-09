@@ -45,3 +45,15 @@
 .modalContainer.active {
     transform: scale(1);
 }
+
+@media (max-width: 500px) {
+    .modalContainer {
+        .modalWindow {
+            width: 70vw;
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}
