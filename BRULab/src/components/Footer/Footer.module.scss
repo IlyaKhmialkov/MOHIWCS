@@ -13,5 +13,11 @@ footer {
         list-style: none;
         gap: 1rem;
         text-decoration: underline;
+
+        li {
+            a {
+                color: $text;
+            }
+        }
     }
 }
