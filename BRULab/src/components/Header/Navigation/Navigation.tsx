@@ -12,6 +12,7 @@ export function Navigation() {
             <Breadcrumbs
                 aria-label="breadcrumb"
                 sx={{
+                    "& .MuiBreadcrumbs-separator": { color: "#FFFFFF" },
                     "@media (max-width: 400px)": {
                         "& .MuiBreadcrumbs-separator": { display: "none" },
                         "& .MuiBreadcrumbs-ol": {

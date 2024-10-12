@@ -1,23 +1,10 @@
 @import "../../assets/variables.scss";
 
-footer {
+.footer {
     background-color: $bgSecondary;
-    height: 4.5rem;
+    height: 4rem;
     padding: 0 3rem;
 
     display: flex;
     align-items: center;
-
-    .contacts {
-        display: flex;
-        list-style: none;
-        gap: 1rem;
-        text-decoration: underline;
-
-        li {
-            a {
-                color: $text;
-            }
-        }
-    }
 }

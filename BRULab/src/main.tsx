@@ -79,7 +79,7 @@ createRoot(document.getElementById("root")!).render(
 // ButtonGroup -> reactAbout
 // Link -> Navigation
 // Breadcrumbs -> Navigation
-//
-//
+// Modal -> MUIModal
+// Typography -> MUIModal
 //
 //
