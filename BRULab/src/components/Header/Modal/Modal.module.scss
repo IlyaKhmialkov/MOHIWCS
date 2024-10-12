@@ -1,19 +1,9 @@
 @import "../../../assets/variables.scss";
 
 .modalContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-
-    background: rgba($color: #000000, $alpha: 0.7);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    transform: scale(0);
 
     .modalWindow {
         z-index: 10;
@@ -33,17 +23,20 @@
         border-radius: 2rem;
 
         p {
-            font-size: 2.4rem;
+            font-size: 2rem;
+        }
+
+        .checkboxDiv {
+            display: flex;
+            p {
+                margin-top: -4px;
+            }
         }
 
         img {
             width: 10rem;
         }
     }
-}
-
-.modalContainer.active {
-    transform: scale(1);
 }
 
 @media (max-width: 500px) {

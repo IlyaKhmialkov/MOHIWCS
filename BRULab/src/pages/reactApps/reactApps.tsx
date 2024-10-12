@@ -3,7 +3,7 @@ import { Header } from "../../components/Header/Header.tsx";
 import { Footer } from "../../components/Footer/Footer.tsx";
 import { TextBox } from "../../components/TextBox/TextBox.tsx";
 import { TextImgBox } from "../../components/TextImgBox/TextImgBox.tsx";
-import { Button } from "../../components/Button/Button.tsx";
+import { Button } from "@mui/material";
 import styles from "./reactApps.module.scss";
 
 export function ReactApps() {
@@ -18,7 +18,9 @@ export function ReactApps() {
                 <TextImgBox text={reactAppsData.text1} imgSrc={reactAppsData.imgSrc} />
                 <TextBox header={reactAppsData.header1} text1={reactAppsData.text2} text2={reactAppsData.text3} />
                 <TextBox header={reactAppsData.header2} text1={reactAppsData.text4} text2={reactAppsData.text5} />
-                <Button text={reactAppsData.buttonText} link={reactAppsData.buttonLink} />
+                <Button variant="contained" href="https://brainhub.eu/library/famous-apps-using-reactjs" size="large">
+                    see other react apps
+                </Button>
             </main>
 
             <Footer />
