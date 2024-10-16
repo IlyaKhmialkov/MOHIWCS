@@ -1,0 +1,11 @@
+@import "../../../../assets/variables.scss";
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 5px;
+    padding: 2.5px 7.5px;
+
+    background-color: $bgPrimary;
+}

@@ -1,11 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+
 import { ReactAbout } from "./pages/reactAbout/reactAabout.tsx";
 import { ReactApps } from "./pages/reactApps/reactApps.tsx";
 import { ReactGuide } from "./pages/reactGuide/reactGuide.tsx";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage.tsx";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { store } from "./store/store.ts";
 
 const customTheme = createTheme({
     components: {
@@ -60,27 +63,16 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <ThemeProvider theme={customTheme}>
-            <RouterProvider router={router} />
-        </ThemeProvider>
+        <Provider store={store}>
+            <ThemeProvider theme={customTheme}>
+                <RouterProvider router={router} />
+            </ThemeProvider>
+        </Provider>
     </StrictMode>
 );
 
-// used MUI elements:
-//
-// Backdrop -> modal
-// Fab -> modal
-// Checkbox -> modal
-// icons -> modal
-// Slider -> modal
-// Box -> modal
-// Badge -> modal
-// Button -> any page
-// ButtonGroup -> reactAbout
-// Link -> Navigation
-// Breadcrumbs -> Navigation
-// Modal -> MUIModal
-// List -> MUIModal
-// ListItem -> MUIModal
-// ListItemText -> MUIModal
-// Divider -> MUIModal
+//  реализовать как минимум два различных слайса для управления
+// разными частями состояния приложения;
+//  создать редьюсеры для создания, чтения, обновления и удаления
+// данных в каждом слайсе;
+//  обеспечить обработку ошибок и валидацию данных.

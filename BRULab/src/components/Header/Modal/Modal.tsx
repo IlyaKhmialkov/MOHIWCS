@@ -1,23 +1,16 @@
 import styles from "./Modal.module.scss";
-import { Fab, Backdrop, Checkbox, Slider, Box, Badge } from "@mui/material";
-import { Favorite, FavoriteBorder, Mail, Close } from "@mui/icons-material";
-import { useState } from "react";
+import { Fab, Backdrop } from "@mui/material";
+import { Close } from "@mui/icons-material";
+import { ListItem } from "./ListItem/ListItem";
 
 interface IModalProps {
     open: boolean;
     setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
-
 export function Modal({ open, setOpen }: IModalProps) {
     const handleClose = () => {
         setOpen(false);
-    };
-
-    const [sliderValue, setSliderValue] = useState(0);
-    const handleSliderChange = (_event: Event, newValue: number | number[]) => {
-        setSliderValue(newValue as number);
     };
 
     return (
@@ -29,21 +22,14 @@ export function Modal({ open, setOpen }: IModalProps) {
             <div className={styles.modalContainer}>
                 <div className={styles.modalWindow} onClick={(e) => e.stopPropagation()}>
                     <img src="react.svg" alt="react" />
-                    <div className={styles.checkboxDiv}>
-                        <p>do you like react?</p>
-                        <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+
+                    <div className={styles.List}>
+                        <ListItem item={{ id: 0, name: "arbuz" }}></ListItem>
+                        <ListItem item={{ id: 1, name: "banan" }}></ListItem>
+                        <ListItem item={{ id: 2, name: "pomidor" }}></ListItem>
+                        <ListItem item={{ id: 3, name: "kabachok" }}></ListItem>
                     </div>
-                    <Badge badgeContent={sliderValue} color="success">
-                        <Mail color="warning" />
-                    </Badge>
-                    <Box sx={{ width: 220 }}>
-                        <Slider
-                            defaultValue={0}
-                            onChange={handleSliderChange}
-                            aria-labelledby="input-slider"
-                            valueLabelDisplay="off"
-                        />
-                    </Box>
+
                     <Fab aria-label="add" onClick={() => handleClose()}>
                         <Close />
                     </Fab>

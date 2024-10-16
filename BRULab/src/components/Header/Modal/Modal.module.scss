@@ -26,11 +26,10 @@
             font-size: 2rem;
         }
 
-        .checkboxDiv {
+        .List {
             display: flex;
-            p {
-                margin-top: -4px;
-            }
+            flex-direction: column;
+            gap: 5px;
         }
 
         img {
