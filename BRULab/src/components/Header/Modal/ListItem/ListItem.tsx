@@ -1,27 +1,29 @@
 import styles from "./ListItem.module.scss";
 import { IListItem } from "../../../../types/listItem.types";
-import { useTypedSelector } from "../../../../hooks/useTypedSelector";
 
 import { IconButton } from "@mui/material";
-import { Star, StarBorder } from "@mui/icons-material";
-import { useDispatch } from "react-redux";
-import { actions } from "../../../../store/favorites/favorites.slice";
+import { Star, StarBorder, Edit, DeleteForever } from "@mui/icons-material";
+import { useActions } from "../../../../hooks/useActions";
 
-export function ListItem({ item }: IListItem) {
-    const favorites = useTypedSelector((state) => state.favorites);
-
-    console.log(favorites);
-
-    const dispatch = useDispatch();
+export function ListItem(item: IListItem) {
+    const { toggleFavourites, deleteItem, updateItem } = useActions();
 
     return (
         <div className={styles.listItem}>
             <p>
-                {item.id} {item.name}
+                {item.item.id} {item.item.name}
             </p>
-            <IconButton aria-label="comment" color="info" onClick={() => dispatch(actions.toggleFavourites({ item }))}>
-                {true ? <Star /> : <StarBorder />}
-            </IconButton>
+            <div>
+                <IconButton aria-label="comment" color="info" onClick={() => updateItem({ ...item })}>
+                    <Edit />
+                </IconButton>
+                <IconButton aria-label="comment" color="info" onClick={() => deleteItem({ ...item })}>
+                    <DeleteForever />
+                </IconButton>
+                <IconButton aria-label="comment" color="info" onClick={() => toggleFavourites({ ...item })}>
+                    {item.item.isFavorite ? <Star /> : <StarBorder />}
+                </IconButton>
+            </div>
         </div>
     );
 }
