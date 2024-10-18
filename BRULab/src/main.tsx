@@ -9,6 +9,8 @@ import { ReactGuide } from "./pages/reactGuide/reactGuide.tsx";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage.tsx";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { store } from "./store/store.ts";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./assets/i18n.ts";
 
 const customTheme = createTheme({
     components: {
@@ -65,7 +67,9 @@ createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <Provider store={store}>
             <ThemeProvider theme={customTheme}>
-                <RouterProvider router={router} />
+                <I18nextProvider i18n={i18n}>
+                    <RouterProvider router={router} />
+                </I18nextProvider>
             </ThemeProvider>
         </Provider>
     </StrictMode>

@@ -1,15 +1,13 @@
-import { getJSONFileData } from "../../utils/getJSONFileData.tsx";
 import { Header } from "../../components/Header/Header.tsx";
 import { Footer } from "../../components/Footer/Footer.tsx";
 import { TextImgBox } from "../../components/TextImgBox/TextImgBox.tsx";
 import { Button } from "@mui/material";
 import { TextLinkImgBox } from "../../components/TextLinkImgBox/TextLinkImgBox.tsx";
 import styles from "./reactGuide.module.scss";
+import { useTranslation } from "react-i18next";
 
 export function ReactGuide() {
-    const reactGuideDataPath: string = "reactGuide.json";
-
-    const reactGuideData = getJSONFileData({ path: reactGuideDataPath });
+    const { t } = useTranslation();
 
     return (
         <>
@@ -17,14 +15,14 @@ export function ReactGuide() {
 
             <main className={styles.main}>
                 <TextLinkImgBox
-                    text={reactGuideData.text1}
-                    link={reactGuideData.nodeLink}
-                    linkText={reactGuideData.linkText}
-                    imgSrc={reactGuideData.nodeImg}
+                    text={t("p10")}
+                    link={"https://nodejs.org/en"}
+                    linkText={t("p11")}
+                    imgSrc={"nodeJs.png"}
                 />
-                <TextImgBox text={reactGuideData.text2} imgSrc={reactGuideData.consoleImg} />
+                <TextImgBox text={t("p12")} imgSrc={"console.png"} />
                 <Button variant="contained" href="https://www.youtube.com/watch?v=Fbsusu0xfpY&t=5395s">
-                    react video guide
+                    {t("p13")}
                 </Button>
             </main>
 

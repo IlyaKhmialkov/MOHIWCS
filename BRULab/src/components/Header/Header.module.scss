@@ -9,6 +9,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .div {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 550px) {
@@ -17,12 +23,16 @@
         flex-direction: column;
         justify-content: left;
         gap: 0.5rem;
-        height: 6rem;
+        height: 9rem;
+
+        .div {
+            flex-direction: column;
+        }
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 405px) {
     .header {
-        height: 9rem;
+        height: 12rem;
     }
 }

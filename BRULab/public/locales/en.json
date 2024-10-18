@@ -1,0 +1,29 @@
+{
+    "d0": "about react",
+    "d1": "react guide",
+    "d2": "react apps",
+    "d3": "phone",
+    "d4": "email",
+    "d5": "MUI modal",
+
+    "p00": "React is a JavaScript library for building user interfaces from Facebook. It uses components, declarative approach, and virtual DOM to efficiently update the interface. JSX allows you to write HTML-like code in JavaScript. React is popular, has an active community, and a wide range of tools.",
+    "p01": "Learn more about react with us",
+    "p02": "React (sometimes React.js or ReactJS) is an open-source JavaScript library for building user interfaces.\nReact is developed and maintained by Facebook, Instagram, and a community of individual developers and corporations.\nReact can be used to build single-page and mobile applications. Its goal is to provide high development speed, simplicity, and scalability.\nAs a library for building user interfaces, React is often used with other libraries such as MobX, Redux, and GraphQL.",
+    "p03": "Features:\n1. Unidirectional data flow:\nProperties are passed from parent components to child components. Components receive properties as a set of mutable results, so a component cannot change properties directly, but can change them via callbacks. This mechanism is called \"properties down, events up\".\n2. Virtual DOM:\nReact uses a virtual DOM. React creates an in-memory cache structure that allows it to track the difference between the physical and current states of the interface to customize the DOM update of the browser. This way, the programmer can work with the page, taking into account that it is updated in any way, but the library independently decides which components of the page need to be updated.\n3. Redux:\nReact often uses a bundle with Redux to manage the state of JSX components JavaScript XML (JSX) is an extension of JavaScript syntax that allows you to use HTML-like syntax to describe the structure of the interface. Typically, components are written using JSX, but it is also possible to use regular JavaScript. JSX is reminiscent of another language created at Facebook to extend PHP, XHP.\n4. React Hooks:\nHooks allow you to use state and other React features without writing classes. Building Parent Hooks Allows you to store a logical component in a reusable function.",
+    "p04": "official react site",
+    "p05": "react wikipedia",
+
+    "p10": "To get started with react, you need to install node.js.",
+    "p11": "link to node.js",
+    "p12": "To start working with react, go to the project directory in the console and enter the command npm create vite. then enter y, enter the project name, select the react framework, select the language (JS / TS) + SWC. That's it, your project is created! To run it, enter npm run dev.",
+    "p13": "react video guide",
+
+    "p20": "You use React apps every day, while watching your favorite TV shows, browsing through social media, and checking your email. Time to find out which famous companies built their apps with ReactJS.",
+    "p21": "Facebook",
+    "p22": "Although partially, Facebook is making use of React js. Their webpage is built with React, as the script that is blended in the application code. The use of React on their webpage includes the news feed, profiles, posts, comments, notifications, and other interactive components. The mobile app is also built with a version of React called React Native which is similar, although responsible for displaying the iOS and Android native components instead of the DOM elements.",
+    "p23": "Interestingly, Facebook was the place where the ReactJS library was initially created, which is why it is obvious for the app to use it. React has a vibrant and active community, supported by Facebook and independent developers. This extensive community provides a wealth of resources, libraries, and tools, facilitating knowledge sharing and collaboration.",
+    "p24": "Instagram",
+    "p25": "The use of ReactJS within Instagram is enormous. Proof of that is the numerous features including the geolocations, Google Maps APIs, search engine accuracy as well as tags that pop out without hashtags. It is all there in the API of this React app – and is really impressive. Instagram is completely based on the ReactJS library and has let fans fully adapt to its amazing features.",
+    "p26": "React’s one-way data flow ensures a predictable data structure, making it easier to debug and maintain the application. This is crucial for Instagram, where data consistency and reliability are essential for a seamless user experience​. Instagram also benefits from React’s performance optimizations. The use of the Virtual DOM and server-side rendering ensures that Instagram's dynamic content loads quickly and smoothly, enhancing user experience.",
+    "p27": "see other react apps"
+}
