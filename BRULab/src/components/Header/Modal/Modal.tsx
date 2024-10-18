@@ -3,10 +3,7 @@ import { Fab, Backdrop, Badge, IconButton } from "@mui/material";
 import { Close, Favorite, AddCircleOutline } from "@mui/icons-material";
 import { ListItem } from "./ListItem/ListItem";
 import { useFavorites } from "../../../hooks/useFavorites";
-import { useSelector } from "react-redux";
-import { selectAllFavorites } from "../../../store/items/items.selector";
-import { IListItem } from "../../../types/listItem.types";
-import { useActions } from "../../../hooks/useActions";
+import { useItemActions } from "../../../hooks/useItemActions";
 
 interface IModalProps {
     open: boolean;
@@ -19,9 +16,7 @@ export function Modal({ open, setOpen }: IModalProps) {
     };
 
     const { favorites } = useFavorites();
-    const { addItem } = useActions();
-
-    const items: IListItem[] = useSelector(selectAllFavorites);
+    const { addItem } = useItemActions();
 
     let favoritesCount = 0;
     let maxId = 0;
@@ -62,7 +57,7 @@ export function Modal({ open, setOpen }: IModalProps) {
                         <AddCircleOutline />
                     </IconButton>
                     <div className={styles.List}>
-                        {items.map((i) => {
+                        {favorites.map((i) => {
                             return <ListItem item={i.item} key={i.item.id} />;
                         })}
                     </div>

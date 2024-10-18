@@ -32,6 +32,8 @@ export const favoritesSlice = createSlice({
         addItem: (state, { payload: { item } }: PayloadAction<IListItem>) => {
             if (state.some((i) => i.item.id !== item.id)) {
                 state.push({ item });
+            } else if (state.length === 0) {
+                state.push({ item });
             }
         },
         updateItem: (state, { payload: { item } }: PayloadAction<IListItem>) => {

@@ -1,5 +1,8 @@
 import { Modal, Box, List, ListItem, ListItemText, IconButton, Divider } from "@mui/material";
 import CommentIcon from "@mui/icons-material/Comment";
+import { usePersons } from "../../../hooks/usePersons";
+import { usePersonActions } from "../../../hooks/usePersonActions";
+import { AddCircleOutline, Edit, DeleteForever } from "@mui/icons-material";
 
 interface IMUIModalParams {
     open: boolean;
@@ -23,45 +26,67 @@ const style = {
 export function MUIModal({ open, setOpen }: IMUIModalParams) {
     const handleClose = () => setOpen(false);
 
+    const { persons } = usePersons();
+    const { addPerson, deletePerson, updatePerson } = usePersonActions();
+
+    let maxId = 0;
+    persons.forEach((p) => {
+        if (p.person.id >= maxId) {
+            maxId = p.person.id + 1;
+        }
+    });
+
     return (
         <Modal open={open} onClose={handleClose}>
             <Box sx={style}>
+                <IconButton
+                    aria-label="comment"
+                    color="info"
+                    onClick={() => addPerson({ person: { id: maxId, name: "new name", isBusy: false } })}
+                >
+                    <AddCircleOutline />
+                </IconButton>
                 <List sx={{ bgcolor: "inherit" }}>
-                    <ListItem
-                        key={"i1"}
-                        disableGutters
-                        secondaryAction={
-                            <IconButton aria-label="comment" color="info">
-                                <CommentIcon />
-                            </IconButton>
-                        }
-                    >
-                        <ListItemText primary={`Contact 1`} />
-                    </ListItem>
-                    <Divider key={"d1"} component="li" sx={{ backgroundColor: "#fff" }} />
-                    <ListItem
-                        key={"i2"}
-                        disableGutters
-                        secondaryAction={
-                            <IconButton aria-label="comment" color="info">
-                                <CommentIcon />
-                            </IconButton>
-                        }
-                    >
-                        <ListItemText primary={`Contact 2`} />
-                    </ListItem>
-                    <Divider key={"d2"} component="li" sx={{ backgroundColor: "#fff" }} />
-                    <ListItem
-                        key={"i3"}
-                        disableGutters
-                        secondaryAction={
-                            <IconButton aria-label="comment" color="info">
-                                <CommentIcon />
-                            </IconButton>
-                        }
-                    >
-                        <ListItemText primary={`Contact 3`} />
-                    </ListItem>
+                    {persons.map((i) => {
+                        return (
+                            <div key={`${i.person.id}K`}>
+                                <ListItem
+                                    key={i.person.id}
+                                    disableGutters
+                                    secondaryAction={
+                                        <IconButton aria-label="comment" color="info" disabled={i.person.isBusy}>
+                                            <CommentIcon />
+                                        </IconButton>
+                                    }
+                                >
+                                    <ListItemText primary={i.person.name} />
+                                    <IconButton
+                                        aria-label="comment"
+                                        color="info"
+                                        onClick={() =>
+                                            updatePerson({
+                                                person: {
+                                                    id: i.person.id,
+                                                    name: i.person.name,
+                                                    isBusy: !i.person.isBusy,
+                                                },
+                                            })
+                                        }
+                                    >
+                                        <Edit />
+                                    </IconButton>
+                                    <IconButton
+                                        aria-label="comment"
+                                        color="info"
+                                        onClick={() => deletePerson({ ...i })}
+                                    >
+                                        <DeleteForever />
+                                    </IconButton>
+                                </ListItem>
+                                <Divider key={`${i.person.id}D`} component="li" sx={{ backgroundColor: "#fff" }} />
+                            </div>
+                        );
+                    })}
                 </List>
             </Box>
         </Modal>

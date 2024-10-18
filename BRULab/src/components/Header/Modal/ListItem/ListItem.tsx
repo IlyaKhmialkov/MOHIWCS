@@ -3,14 +3,14 @@ import { IListItem } from "../../../../types/listItem.types";
 
 import { IconButton } from "@mui/material";
 import { Star, StarBorder, Edit, DeleteForever } from "@mui/icons-material";
-import { useActions } from "../../../../hooks/useActions";
+import { useItemActions } from "../../../../hooks/useItemActions";
 
 export function ListItem(item: IListItem) {
-    const { toggleFavourites, deleteItem, updateItem } = useActions();
+    const { toggleFavourites, deleteItem, updateItem } = useItemActions();
 
     return (
         <div className={styles.listItem}>
-            <p>
+            <p id={styles.p}>
                 {item.item.id} {item.item.name}
             </p>
             <div>

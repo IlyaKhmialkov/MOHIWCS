@@ -5,10 +5,3 @@ export interface IListItem {
         isFavorite: boolean;
     };
 }
-
-export interface IListItemData {
-    item: {
-        name: string;
-        isFavorite: boolean;
-    };
-}
